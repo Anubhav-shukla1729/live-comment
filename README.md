@@ -80,8 +80,8 @@ Create a table named comments:
    cd ../frontend
    npm start
    ```
-7.**Open the Application:
+7.**Open the Application:**
 
-Navigate to http://localhost:3000 in your web browser.**
+Navigate to http://localhost:3000 in your web browser.
 
 
