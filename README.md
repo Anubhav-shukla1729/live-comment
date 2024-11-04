@@ -50,16 +50,16 @@ This project is a simple comments system built using Node.js, Express, and a MyS
    cd comments-backend
    npm install
    ```
-3.**Install Frontend Dependencies:
+3.**Install Frontend Dependencies:**
    ```bash
    cd ../frontend
    npm install
 ```
-4.**Set Up the Database:
+4.**Set Up the Database:**
 
 Create a new database called comments_system.
 Create a table named comments:
- **
+```bash
  Sql
  CREATE TABLE comments (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -68,6 +68,7 @@ Create a table named comments:
     sessionId VARCHAR(255),
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
 
 5.**Run backend server :**
 ```bash
