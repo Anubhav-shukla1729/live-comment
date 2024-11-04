@@ -44,68 +44,43 @@ This project is a simple comments system built using Node.js, Express, and a MyS
    ```bash
    git clone https://github.com/Anubhav-shukla1729/live-comment.git
    cd live-comment
-Install Backend Dependencies:
-
-bash
-Copy code
-cd backend
-npm install
-Install Frontend Dependencies:
-
-bash
-Copy code
-cd frontend
-npm install
-Set Up the Database:
+   ```
+2. **Install Backend Dependencies:**
+   ```bash
+   cd comments-backend
+   npm install
+   ```
+3.**Install Frontend Dependencies:
+   ```bash
+   cd ../frontend
+   npm install
+```
+4.**Set Up the Database:
 
 Create a new database called comments_system.
 Create a table named comments:
-sql
-Copy code
-CREATE TABLE comments (
+ **
+ Sql
+ CREATE TABLE comments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
     comment TEXT NOT NULL,
     sessionId VARCHAR(255),
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-Run the Backend Server:
 
-bash
-Copy code
-cd backend
-node index.js
-Run the Frontend Application:
+5.**Run backend server :**
+```bash
+   cd ../comments-backend
+   node index.js
+```
+6.**Run the frontend**
+   ```bash
+   cd ../frontend
+   npm start
+   ```
+7.**Open the Application:
 
-bash
-Copy code
-cd frontend
-npm start
-Open the Application:
+Navigate to http://localhost:3000 in your web browser.**
 
-Navigate to http://localhost:3000 in your web browser.
-API Endpoints
-POST /api/login
 
-Request body: { "username": "your_username" }
-Response: { "sessionId": "generated_session_id" }
-GET /api/comments
-
-Response: List of comments in JSON format.
-POST /api/comments
-
-Request body: { "username": "your_username", "comment": "your_comment" }
-Response: Newly created comment object.
-DELETE /api/comments
-
-Response: Confirmation of comment deletion.
-Database Structure
-sql
-Copy code
-CREATE TABLE comments (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    comment TEXT NOT NULL,
-    sessionId VARCHAR(255),
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
